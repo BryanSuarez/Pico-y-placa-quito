@@ -17,12 +17,21 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the application main view, the form.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+
         return view('home');
+    }
+
+    /*
+    * Method to check availability of vehicle circulation 
+    */
+    public function consult(Request $request)
+    {
+        dd($request->all());
     }
 }
